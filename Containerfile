@@ -12,11 +12,11 @@ RUN dnf install -y \
     && flatpak remote-add --if-not-exists \
         flathub https://dl.flathub.org/repo/flathub.flatpakrepo \
     && flatpak install --assumeyes \
-        flathub ... \
+        flathub com.play0ad.zeroad \
     && git config -f /etc/rdesktop/rdesktop.ini \
-	rdesktop.title "Personal ..." \
+	rdesktop.title "Personal 0 A.D." \
     && git config -f /etc/rdesktop/rdesktop.ini \
-	rdesktop.exec "flatpak run ..."
+	rdesktop.exec "flatpak run com.play0ad.zeroad"
 
 # ensure to become root for systemd
 #ENTRYPOINT ["/sbin/init"]
